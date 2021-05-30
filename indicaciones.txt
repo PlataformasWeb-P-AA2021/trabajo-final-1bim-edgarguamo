@@ -1,0 +1,16 @@
+Para poder ejecutar bien este repositorio es necesario emplear las siguientes
+librerias:
+ - Pandas
+ - Sqlalchemy
+
+Ejecución de los archivos
+
+Se debe ejecutar los modulos en el siguiente orden:
+genera_tablas.py
+ingresa_provincias.py
+ingresa_cantones.py
+ingresa_parroquias.py
+ingresa_establecimientos.py
+
+Finalmente Ejecute las consultas en el órden que usted desee
+

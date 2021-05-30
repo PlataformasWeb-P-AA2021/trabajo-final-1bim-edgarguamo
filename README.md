@@ -34,7 +34,7 @@ Dada la información de la carpeta ***data***. Realizar las siguientes tareas:
 		* Los cantones que tiene establecimientos con 0 número de profesores
 		* Los establecimientos que pertenecen a la parroquia Catacocha con estudiantes mayores o iguales a 21
 	* consulta4.py
-		* Los establecimientos ordenados por número de estudiantes; que tengan más de 100 profesores. 
+		* Los establecimientos ordenados por número de estudiantes; que tengan más de 100 profesores.
 		* Los establecimientos ordenados por número de profesores; que tengan más de 100 profesores.
 	* consulta5.py
 		* Los establecimientos ordenados por nombre de parroquia que tengan más de 20 profesores y la cadena "Permanente" en tipo de educación.
