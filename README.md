@@ -1,5 +1,17 @@
 # Trabajo Final Primer Bimestre
 
+## Indicaciones
+### Librerias Necesarias
+* SqlAlchemy
+* Pandas
+### Orden de ejecución de los documentos
+1. genera_tablas
+2. ingresa_provincias
+3. ingresa_cantones
+4. ingresa_parroquias
+5. ingresa_establecimientos
+
+Ejecute las cosultas a su gusto
 ## Uso de SqlAlchemy
 
 Dada la información de la carpeta ***data***. Realizar las siguientes tareas:

@@ -43,7 +43,7 @@ for insti in insti_canton_loja:
 
 
 """
-Verificación: Consulta para saber el num de instituciones
+Verificación: Consulta para saber el num total  de instituciones
 """
 num_insti_prov_loja= session.query(Provincia, Canton, Parroquia, Instituto)\
         .join(Instituto,Canton,Provincia).filter(Provincia.nombre.like('Loja'))\

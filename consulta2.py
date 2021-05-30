@@ -11,9 +11,10 @@ engine = create_engine('sqlite:///instituciones.db')
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# Consulta 2.1 Las parroquias que tienen establecimientos únicamente enla jornada
-# nocturna
-
+"""
+Consulta 2.1 Las parroquias que tienen establecimientos únicamente enla jornada
+nocturna
+"""
 instituciones_nocturnos = session.query(Parroquia.nombre,Instituto.parroquia_id,
         Parroquia.id).distinct(Parroquia.nombre)\
                 .join(Instituto).filter(Instituto.jornada.\
@@ -21,9 +22,15 @@ instituciones_nocturnos = session.query(Parroquia.nombre,Instituto.parroquia_id,
 print('\n-------------------------- \n Consulta 2.1 \n -----------------------\n')
 for insti in instituciones_nocturnos:
     print(insti[0])
-
-#Consulta 2.2 Los cantones que tiene establecimientos como número de estudiantes tales como:
-# 448,450,451,454,458,459
+"""
+Consulta 2.2 Los cantones que tiene establecimientos como número de estudiantes tales como:
+448,450,451,454,458,459
+"""
+"""
+Para esta consulta es necesario emplear la función distinct, pero sqlAchemy
+solo permite esta opción si se usa postgres, por lo que es necesario un filtrado
+externo
+"""
 
 instituciones_cantones = session.query(Canton.nombre,
         Instituto.parroquia_id,Parroquia.id,
@@ -33,6 +40,7 @@ instituciones_cantones = session.query(Canton.nombre,
             Instituto.num_estudiantes==454, Instituto.num_estudiantes==458,
             Instituto.num_estudiantes==459)).all()
 print('\n -------------------- \n Consulta 2.2 \n ----------------------- \n')
+
 aux = []
 for insti in instituciones_cantones:
     aux.append(insti[0])
